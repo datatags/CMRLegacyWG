@@ -6,10 +6,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.plugin.Plugin;
-
 import com.sk89q.worldguard.bukkit.WGBukkit;
-import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import com.sk89q.worldguard.protection.ApplicableRegionSet;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
@@ -40,14 +37,6 @@ public class RegionCheckerWG6x implements RegionChecker {
 			}
 		}
 		return ids;
-	}
-	@Override
-	public boolean isWorldGuardLoaded() { // internal
-	    Plugin plugin = Bukkit.getPluginManager().getPlugin("WorldGuard");
-	    if (plugin == null || !(plugin instanceof WorldGuardPlugin)) {
-	        return false;
-	    }
-	    return true;
 	}
 	@Override
 	public int getNative() {
