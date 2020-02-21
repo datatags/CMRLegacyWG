@@ -1,0 +1,5 @@
+name: CMRLegacyWG
+version: 1.0
+author: AlanZ
+main: me.AlanZ.CMRLegacyWG.CMRLegacyWG
+depend: [CommandMineRewards, WorldGuard]
