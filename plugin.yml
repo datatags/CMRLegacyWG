@@ -1,5 +1,5 @@
 name: CMRLegacyWG
-version: 1.0
-author: AlanZ
-main: me.AlanZ.CMRLegacyWG.CMRLegacyWG
+version: 1.1
+author: Datatags
+main: me.Datatags.CMRLegacyWG.CMRLegacyWG
 depend: [CommandMineRewards, WorldGuard]

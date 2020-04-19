@@ -1,4 +1,4 @@
-package me.AlanZ.CMRLegacyWG;
+package me.Datatags.CMRLegacyWG;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,15 +11,15 @@ import com.sk89q.worldguard.protection.ApplicableRegionSet;
 import com.sk89q.worldguard.protection.managers.RegionManager;
 import com.sk89q.worldguard.protection.regions.ProtectedRegion;
 
-import me.AlanZ.CommandMineRewards.GlobalConfigManager;
-import me.AlanZ.CommandMineRewards.worldguard.RegionChecker;
+import me.Datatags.CommandMineRewards.GlobalConfigManager;
+import me.Datatags.CommandMineRewards.worldguard.RegionChecker;
 
 public class RegionCheckerWG6x implements RegionChecker {
 	@Override
 	public boolean isInRegion(List<String> regions, Block block) {
 		ApplicableRegionSet set = getRegionManager(block.getWorld()).getApplicableRegions(block.getLocation());
 		for (ProtectedRegion region : set) {
-			if (GlobalConfigManager.containsIgnoreCase(regions, region.getId())) {
+			if (GlobalConfigManager.getInstance().containsIgnoreCase(regions, region.getId())) {
 				return true;
 			}
 		}
